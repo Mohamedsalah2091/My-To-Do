@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="utt-gr-YVI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="go0-mj-uza">
+            <objects>
+                <viewController id="utt-gr-YVI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ywm-1A-LW2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="UKO-6L-Oag">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="UKO-6L-Oag" secondAttribute="trailing" id="2Tt-Yv-eR8"/>
+                            <constraint firstAttribute="bottom" secondItem="UKO-6L-Oag" secondAttribute="bottom" id="Dg5-lh-o3Q"/>
+                            <constraint firstItem="UKO-6L-Oag" firstAttribute="leading" secondItem="Ywm-1A-LW2" secondAttribute="leading" id="JOA-4L-Dha"/>
+                            <constraint firstItem="UKO-6L-Oag" firstAttribute="top" secondItem="Ywm-1A-LW2" secondAttribute="top" id="V08-yZ-D2T"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ddO-99-9eI"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GHn-xx-EQX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-124" y="335"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="splash" width="414" height="736"/>
+    </resources>
+</document>
