@@ -211,7 +211,7 @@ class MapVC: UIViewController , CLLocationManagerDelegate , MKMapViewDelegate {
     
     @IBAction func backButton(_ sender: Any) {
         
-        if (!startTextField.text!.isEmpty && !endTextField.text!.isEmpty ) && (startTextField.text! != start && endTextField.text! != end){
+        if (!startTextField.text!.isEmpty && !endTextField.text!.isEmpty ) && (startTextField.text! != start || endTextField.text! != end){
             send.location(start:startTextField.text! , end: endTextField.text!, cellIndex: cellIndex)
             
         }

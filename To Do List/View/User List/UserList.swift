@@ -44,6 +44,7 @@ class UserList: UIViewController , UITableViewDataSource , UITableViewDelegate, 
 extension UserList: SendData , passData {
     
     func location(start: String, end: String , cellIndex : Int) {
+      
         if data.startLocation.count > cellIndex{
             data.startLocation[cellIndex] = start
             data.endLocation[cellIndex] = end
@@ -55,10 +56,12 @@ extension UserList: SendData , passData {
     }
     
     func addNewData(date: String, content: String) {
-        data.toDoListdate.append(date)
-        data.toDoListContent.append(content)
-        tableView.reloadData()
-        presenter.updateData(data: data)
+        if !date.isEmpty && !content.isEmpty{
+            data.toDoListdate.append(date)
+            data.toDoListContent.append(content)
+            tableView.reloadData()
+            presenter.updateData(data: data)
+        }
     }
     
     

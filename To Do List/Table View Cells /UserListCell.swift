@@ -17,7 +17,7 @@ protocol PressedCell {
 class UserListCell: UITableViewCell {
     
     @IBOutlet weak var date: UILabel!
-    @IBOutlet weak var userNote: UILabel!
+    @IBOutlet weak var userNote: UITextView!
     var deleget : PressedCell?
     @IBOutlet weak var map: UIButton!
     

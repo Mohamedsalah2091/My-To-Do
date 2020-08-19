@@ -25,19 +25,19 @@ extension UserList : PressedCell{
         tableView.register(UINib (nibName: "UserListCell", bundle:  nil ), forCellReuseIdentifier: "cell")
     }
     
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return data.toDoListdate.count
-        }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data.toDoListdate.count
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! UserListCell
         
-            cell.deleget = self
-            cell.deletButton.tag = indexPath.row
-            cell.map.tag = indexPath.row
-            cell.date.text =  data.toDoListdate[indexPath.row]
-            cell.userNote.text =  data.toDoListContent[indexPath.row]
-    
+        cell.deleget = self
+        cell.deletButton.tag = indexPath.row
+        cell.map.tag = indexPath.row
+        cell.date.text =  data.toDoListdate[indexPath.row]
+        cell.userNote.text =  data.toDoListContent[indexPath.row]
+        
         return cell;
     }
     
@@ -50,16 +50,17 @@ extension UserList : PressedCell{
         return .ToDay
     }
     
- 
-
+    
+    
     
     
     func delete(index: Int) {
-        print(index)
         data.toDoListdate.remove(at: index)
         data.toDoListContent.remove(at: index)
-        data.startLocation.remove(at: index)
-        data.endLocation.remove(at: index)
+        if index < data.startLocation.count{
+            data.startLocation.remove(at: index)
+            data.endLocation.remove(at: index)
+        }
         presenter.updateData(data: data)
         tableView.reloadData()
     }

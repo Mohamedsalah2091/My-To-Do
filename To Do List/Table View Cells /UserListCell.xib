@@ -27,12 +27,6 @@
                         <color key="textColor" red="0.73879128689999995" green="0.36442792419999998" blue="0.9921230674" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWN-xH-kQb">
-                        <rect key="frame" x="120" y="65.5" width="44" height="21.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                        <color key="textColor" red="0.38349261880000002" green="0.12280026820000001" blue="0.48551553489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5JO-UX-JYV">
                         <rect key="frame" x="377" y="7.5" width="35" height="90"/>
                         <subviews>
@@ -72,18 +66,29 @@
                             <constraint firstAttribute="height" constant="2" id="CL6-9J-U25"/>
                         </constraints>
                     </view>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Lable" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uMP-kL-X1K">
+                        <rect key="frame" x="120" y="45" width="252" height="52"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="52" id="PnC-AS-k6R"/>
+                        </constraints>
+                        <color key="textColor" red="0.72298961880000001" green="0.34532833099999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="5JO-UX-JYV" secondAttribute="trailing" constant="2" id="5El-Ce-ww0"/>
-                    <constraint firstItem="ZWN-xH-kQb" firstAttribute="centerY" secondItem="PLC-RE-ygv" secondAttribute="centerY" constant="23.5" id="JTY-Am-aen"/>
+                    <constraint firstItem="5JO-UX-JYV" firstAttribute="leading" secondItem="uMP-kL-X1K" secondAttribute="trailing" constant="5" id="Lk1-GH-CsQ"/>
+                    <constraint firstItem="uMP-kL-X1K" firstAttribute="leading" secondItem="f6R-lU-kdG" secondAttribute="trailing" constant="25" id="N2D-5H-dHG"/>
                     <constraint firstItem="f6R-lU-kdG" firstAttribute="top" secondItem="PLC-RE-ygv" secondAttribute="top" id="PvZ-sd-D2k"/>
                     <constraint firstItem="gEM-bx-hFO" firstAttribute="centerY" secondItem="PLC-RE-ygv" secondAttribute="centerY" constant="-26.75" id="S2P-qD-7c2"/>
-                    <constraint firstItem="ZWN-xH-kQb" firstAttribute="leading" secondItem="f6R-lU-kdG" secondAttribute="trailing" constant="25" id="XQa-lw-ebd"/>
                     <constraint firstAttribute="bottom" secondItem="BWr-H4-rdz" secondAttribute="bottom" id="Yoh-Bm-q7q"/>
                     <constraint firstItem="gEM-bx-hFO" firstAttribute="leading" secondItem="f6R-lU-kdG" secondAttribute="trailing" constant="25" id="YwO-rl-kYQ"/>
                     <constraint firstAttribute="bottom" secondItem="f6R-lU-kdG" secondAttribute="bottom" id="ZsV-ec-Ul5"/>
                     <constraint firstItem="BWr-H4-rdz" firstAttribute="leading" secondItem="PLC-RE-ygv" secondAttribute="leading" id="arD-y7-wYz"/>
                     <constraint firstItem="5JO-UX-JYV" firstAttribute="centerY" secondItem="PLC-RE-ygv" secondAttribute="centerY" id="b7w-F8-xKU"/>
+                    <constraint firstItem="uMP-kL-X1K" firstAttribute="centerY" secondItem="PLC-RE-ygv" secondAttribute="centerY" constant="18.5" id="hvS-ND-Mwl"/>
                     <constraint firstItem="f6R-lU-kdG" firstAttribute="leading" secondItem="PLC-RE-ygv" secondAttribute="leading" id="hxY-xj-7Nq"/>
                     <constraint firstAttribute="trailing" secondItem="BWr-H4-rdz" secondAttribute="trailing" id="lYv-A7-WlL"/>
                     <constraint firstItem="5JO-UX-JYV" firstAttribute="leading" secondItem="gEM-bx-hFO" secondAttribute="trailing" constant="5" id="q0g-1I-Zmt"/>
@@ -93,7 +98,7 @@
                 <outlet property="date" destination="gEM-bx-hFO" id="Da2-W5-GaQ"/>
                 <outlet property="deletButton" destination="yMe-Qd-PBN" id="iTa-Xt-tNa"/>
                 <outlet property="map" destination="hRK-0g-0bC" id="7dJ-a9-ZEi"/>
-                <outlet property="userNote" destination="ZWN-xH-kQb" id="W5X-GF-wcH"/>
+                <outlet property="userNote" destination="uMP-kL-X1K" id="hjD-jO-Vqj"/>
             </connections>
             <point key="canvasLocation" x="21.739130434782609" y="153.01339285714286"/>
         </tableViewCell>

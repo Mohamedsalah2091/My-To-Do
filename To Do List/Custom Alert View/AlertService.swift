@@ -14,7 +14,8 @@ protocol SendData {
 class AlertService: UIViewController {
     
     @IBOutlet weak var dateTextField: UITextField!
-    @IBOutlet weak var contentTextField: UITextField!
+    
+    @IBOutlet weak var contextTextField: UITextView!
     @IBOutlet weak var saveButton: UIButton!
     
     @IBOutlet weak var alertView: UIView!
@@ -27,11 +28,13 @@ class AlertService: UIViewController {
         saveButton.layer.cornerRadius = 10
         alertView.layer.cornerRadius = 15
         backGroundImage.layer.cornerRadius = 15
+        contextTextField.layer.cornerRadius = 3
         createDatePicker()
     }
     
+    
     @IBAction func pressSaveButton(_ sender: Any) {
-        self.delegate?.addNewData(date:dateTextField.text! , content :contentTextField.text! )
+        self.delegate?.addNewData(date:dateTextField.text! , content :contextTextField.text! )
         dismiss(animated: true)
     }
     

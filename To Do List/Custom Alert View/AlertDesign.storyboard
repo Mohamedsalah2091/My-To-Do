@@ -20,15 +20,12 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background 2" translatesAutoresizingMaskIntoConstraints="NO" id="bbK-P3-vJn">
                                         <rect key="frame" x="0.0" y="0.0" width="331" height="314"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.24933112157534246" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nda-c3-74V">
-                                        <rect key="frame" x="5" y="76" width="321" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gZX-nk-SLV">
-                                        <rect key="frame" x="5" y="167" width="321" height="34"/>
-                                        <color key="textColor" red="0.29817342759999999" green="0.03367701545" blue="0.42987087369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Choose the Date" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="nda-c3-74V">
+                                        <rect key="frame" x="5" y="76" width="321" height="22"/>
+                                        <color key="backgroundColor" red="0.78042727710000004" green="0.70453506710000002" blue="0.82101094720000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -43,10 +40,19 @@
                                             <action selector="pressSaveButton:" destination="aD0-K9-TPl" eventType="touchUpInside" id="5eY-HP-tl9"/>
                                         </connections>
                                     </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UEz-oa-Hcx">
+                                        <rect key="frame" x="5" y="118" width="321" height="75"/>
+                                        <color key="backgroundColor" red="0.70270706866453247" green="0.59059295763214226" blue="0.73721050126903553" alpha="0.67727953767123283" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="cqc-hI-NvK"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="gZX-nk-SLV" firstAttribute="top" secondItem="nda-c3-74V" secondAttribute="bottom" constant="57" id="388-3p-X6S"/>
                                     <constraint firstAttribute="bottom" secondItem="yHY-K4-7OF" secondAttribute="bottom" constant="30" id="6Ks-vI-kS8"/>
                                     <constraint firstItem="bbK-P3-vJn" firstAttribute="leading" secondItem="1bm-78-dZq" secondAttribute="leading" id="8jZ-Zg-Iwa"/>
                                     <constraint firstItem="nda-c3-74V" firstAttribute="leading" secondItem="1bm-78-dZq" secondAttribute="leading" constant="5" id="9pL-yx-FK0"/>
@@ -54,9 +60,10 @@
                                     <constraint firstItem="yHY-K4-7OF" firstAttribute="centerX" secondItem="1bm-78-dZq" secondAttribute="centerX" id="Ewd-7e-hMH"/>
                                     <constraint firstItem="bbK-P3-vJn" firstAttribute="top" secondItem="1bm-78-dZq" secondAttribute="top" id="Lur-ck-TwW"/>
                                     <constraint firstAttribute="trailing" secondItem="nda-c3-74V" secondAttribute="trailing" constant="5" id="Oc1-go-Xz8"/>
-                                    <constraint firstAttribute="trailing" secondItem="gZX-nk-SLV" secondAttribute="trailing" constant="5" id="SOH-fQ-3gH"/>
+                                    <constraint firstAttribute="trailing" secondItem="UEz-oa-Hcx" secondAttribute="trailing" constant="5" id="PZ9-Q9-n1s"/>
+                                    <constraint firstItem="UEz-oa-Hcx" firstAttribute="leading" secondItem="1bm-78-dZq" secondAttribute="leading" constant="5" id="SKP-f1-iIY"/>
                                     <constraint firstAttribute="bottom" secondItem="bbK-P3-vJn" secondAttribute="bottom" id="VWo-L8-yiX"/>
-                                    <constraint firstItem="gZX-nk-SLV" firstAttribute="leading" secondItem="1bm-78-dZq" secondAttribute="leading" constant="5" id="gC1-or-dnR"/>
+                                    <constraint firstItem="UEz-oa-Hcx" firstAttribute="top" secondItem="nda-c3-74V" secondAttribute="bottom" constant="20" id="ef6-n3-8mC"/>
                                     <constraint firstItem="nda-c3-74V" firstAttribute="top" secondItem="1bm-78-dZq" secondAttribute="top" constant="76" id="gMf-eF-y8h"/>
                                     <constraint firstAttribute="trailing" secondItem="bbK-P3-vJn" secondAttribute="trailing" id="lrs-SR-Paa"/>
                                     <constraint firstItem="yHY-K4-7OF" firstAttribute="width" secondItem="bbK-P3-vJn" secondAttribute="width" multiplier="0.7" id="qEd-7b-Ay6"/>
@@ -75,7 +82,7 @@
                     <connections>
                         <outlet property="alertView" destination="1bm-78-dZq" id="v7a-hO-o5b"/>
                         <outlet property="backGroundImage" destination="bbK-P3-vJn" id="UNH-mb-rJu"/>
-                        <outlet property="contentTextField" destination="gZX-nk-SLV" id="k3q-YT-9Q3"/>
+                        <outlet property="contextTextField" destination="UEz-oa-Hcx" id="hwF-i9-xSw"/>
                         <outlet property="dateTextField" destination="nda-c3-74V" id="B97-fA-OFS"/>
                         <outlet property="saveButton" destination="yHY-K4-7OF" id="aKh-zO-8aQ"/>
                     </connections>
